@@ -1,0 +1,33 @@
+<idea-plugin>
+  <id>PLUGIN_ID</id>
+  <name>PLUGIN_NAME</name>
+  <version>1.0</version>
+  <vendor email="VENDER_EMAIL" url="VENDER_URL">VENDER_NAME</vendor>
+
+  <description><![CDATA[
+      PLUGIN_DESCRIPTION, PLUGIN_DESCRIPTION, PLUGIN_DESCRIPTION, PLUGIN_DESCRIPTION
+    ]]></description>
+
+  <change-notes><![CDATA[
+      CHANGE_NOTE, CHANGE_NOTE, CHANGE_NOTE, CHANGE_NOTE
+    ]]>
+  </change-notes>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="182.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.lang</depends>
+  <depends>com.intellij.modules.java</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>

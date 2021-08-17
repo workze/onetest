@@ -9,6 +9,7 @@
         <module>lang</module>
         <module>freemarker</module>
         <module>spring</module>
+        <module>idea-plugin-bundle</module>
     </modules>
 
     <packaging>pom</packaging>
