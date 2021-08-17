@@ -28,6 +28,12 @@
 
   <actions>
     <!-- Add your actions here -->
+    <action id="com.onetest.TestAction" class="com.onetest.idea.action.TestAction" text="TestAction"
+            icon="AllIcons.Debugger.ThreadStates.Socket"
+            description="TestAction">
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+    </action>
   </actions>
 
 </idea-plugin>
