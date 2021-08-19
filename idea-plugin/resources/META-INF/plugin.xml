@@ -24,6 +24,10 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
+    <applicationService serviceInterface="com.onetest.idea.persistent.AppPersistentService"
+                        serviceImplementation="com.onetest.idea.persistent.impl.AppPersistentServiceImpl"/>
+    <projectService serviceInterface="com.onetest.idea.persistent.ProjectPersistentService"
+                    serviceImplementation="com.onetest.idea.persistent.impl.ProjectPersistentServiceImpl"/>
   </extensions>
 
   <actions>
