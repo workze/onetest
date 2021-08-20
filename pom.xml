@@ -10,6 +10,7 @@
         <module>freemarker</module>
         <module>spring</module>
         <module>idea-plugin-bundle</module>
+        <module>sqlite</module>
     </modules>
 
     <packaging>pom</packaging>
