@@ -1,13 +1,15 @@
 package com.onetest.idea.action;
 
+import com.intellij.execution.filters.BrowserHyperlinkInfo;
 import com.intellij.execution.ui.ConsoleView;
 import com.intellij.execution.ui.ConsoleViewContentType;
-import com.intellij.ide.BrowserUtil;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.wm.ToolWindow;
+import com.intellij.openapi.wm.ToolWindowManager;
 import com.onetest.idea.toolwindow.ConsoleViewHolder;
 import org.jetbrains.annotations.NotNull;
 
@@ -19,14 +21,27 @@ public class TestAction extends AnAction {
     @Override
     public void actionPerformed(AnActionEvent e) {
         final Project project = e.getProject();
-        if (project != null && project.isDisposed()) {
+        if (project == null || project.isDisposed()) {
             return;
         }
 
+        // 激活toolwindow
+        ToolWindow toolWindow = ToolWindowManager.getInstance(e.getProject()).getToolWindow("TestToolWindow");
+        if (toolWindow == null) {
+            throw new RuntimeException("toolWindow is null");
+        }
+        toolWindow.activate(null);
 
-        // BrowserUtil.browse("https://www.baidu.com");
+
+        // 打开浏览器, 跳转到网页
         final ConsoleView consoleView = ConsoleViewHolder.getInstance(project).getConsoleView();
-        consoleView.print("AnAction.actionPerformed()\n", ConsoleViewContentType.NORMAL_OUTPUT);
+
+        // 控制台输出超链接
+        consoleView.printHyperlink("http://www.baidu.com\n", new BrowserHyperlinkInfo("http://www.baidu.com"));
+
+        // 滚动条滚到最后
+        consoleView.requestScrollingToEnd();
+
     }
 
     @Override

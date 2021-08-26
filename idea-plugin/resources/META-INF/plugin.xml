@@ -30,9 +30,10 @@
                         serviceImplementation="com.onetest.idea.persistent.impl.ProjectPersistentServiceImpl"/>
 
 
-
+        <!-- consoleView hold服务 -->
         <projectService serviceInterface="com.onetest.idea.toolwindow.ConsoleViewHolder"
                         serviceImplementation="com.onetest.idea.toolwindow.impl.ConsoleViewHolderImpl"/>
+
         <toolWindow id="TestToolWindow" icon="AllIcons.Debugger.ThreadStates.Socket" anchor="bottom"
                     factoryClass="com.onetest.idea.toolwindow.TestToolWindowFactory"/>
 
