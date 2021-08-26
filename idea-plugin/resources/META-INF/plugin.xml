@@ -58,6 +58,11 @@
             <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </action>
+        <action id="MultiToolWindow" class="com.onetest.idea.action.MultiToolWindow" text="MultiToolWindow"
+                description="MultiToolWindow">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>>
     </actions>
 
 

@@ -13,7 +13,7 @@ public class TestToolWindowFactory implements ToolWindowFactory {
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
         final ConsoleView consoleView = ConsoleViewHolder.getInstance(project).getConsoleView();
 
-        Content content = toolWindow.getContentManager().getFactory().createContent(consoleView.getComponent(), "", true);
+        Content content = toolWindow.getContentManager().getFactory().createContent(consoleView.getComponent(), "First", true);
         toolWindow.getContentManager().addContent(content);
     }
 }
