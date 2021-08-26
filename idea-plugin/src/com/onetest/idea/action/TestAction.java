@@ -6,12 +6,15 @@ import com.intellij.execution.ui.ConsoleViewContentType;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
+import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
 import com.onetest.idea.toolwindow.ConsoleViewHolder;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author guize
@@ -39,9 +42,24 @@ public class TestAction extends AnAction {
         // 控制台输出超链接
         consoleView.printHyperlink("http://www.baidu.com\n", new BrowserHyperlinkInfo("http://www.baidu.com"));
 
+        consoleView.print(Thread.currentThread().getName(), ConsoleViewContentType.NORMAL_OUTPUT);
+
         // 滚动条滚到最后
         consoleView.requestScrollingToEnd();
 
+        ApplicationManager.getApplication().executeOnPooledThread(() -> {
+            ApplicationManager.getApplication().runReadAction(() -> {
+                consoleView.print(Thread.currentThread().getName(), ConsoleViewContentType.NORMAL_OUTPUT);
+                for (int i = 0; i < 3; i++) {
+                    try {
+                        consoleView.print("hello " + i + "\n", ConsoleViewContentType.NORMAL_OUTPUT);
+                        TimeUnit.SECONDS.sleep(1);
+                    } catch (InterruptedException interruptedException) {
+                        interruptedException.printStackTrace();
+                    }
+                }
+            });
+        });
     }
 
     @Override

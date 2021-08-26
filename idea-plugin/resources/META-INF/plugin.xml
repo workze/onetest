@@ -34,8 +34,12 @@
         <projectService serviceInterface="com.onetest.idea.toolwindow.ConsoleViewHolder"
                         serviceImplementation="com.onetest.idea.toolwindow.impl.ConsoleViewHolderImpl"/>
 
-        <toolWindow id="TestToolWindow" icon="AllIcons.Debugger.ThreadStates.Socket" anchor="bottom"
-                    factoryClass="com.onetest.idea.toolwindow.TestToolWindowFactory"/>
+        <toolWindow id="TestToolWindow"
+                    icon="AllIcons.Debugger.ThreadStates.Socket"
+                    anchor="bottom"
+                    factoryClass="com.onetest.idea.toolwindow.TestToolWindowFactory"
+                    canCloseContents="true"
+        />
 
 
 
@@ -58,11 +62,15 @@
             <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </action>
+
+
         <action id="MultiToolWindow" class="com.onetest.idea.action.MultiToolWindow" text="MultiToolWindow"
                 description="MultiToolWindow">
             <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
-        </action>>
+        </action>
+
+
     </actions>
 
 
