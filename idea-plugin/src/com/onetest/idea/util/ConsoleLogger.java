@@ -39,7 +39,7 @@ public class ConsoleLogger {
     /*  */
 
     private void log(String msg, ConsoleViewContentType contentType) {
-        this.consoleView.print(msg, contentType);
+        this.consoleView.print(msg + "\n", contentType);
     }
 
 }
