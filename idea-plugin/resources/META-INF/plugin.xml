@@ -71,6 +71,10 @@
         </action>
 
 
+        <action id="PsiAction" class="com.onetest.idea.action.PsiAction" text="PsiAction" description="PsiAction">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
     </actions>
 
 
