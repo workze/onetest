@@ -36,6 +36,17 @@
         <toolWindow id="TestToolWindow" icon="AllIcons.Debugger.ThreadStates.Socket" anchor="bottom"
                     factoryClass="com.onetest.idea.toolwindow.TestToolWindowFactory"/>
 
+
+
+        <localInspection  language="JAVA"
+                          displayName="Test field error11"
+                          groupPath="Java"
+                          groupBundle="messages.InspectionsBundle"
+                          groupKey="group.names.probable.bugs"
+                          enabledByDefault="true"
+                          level="WARN"
+                          implementationClass="com.onetest.idea.inspection.TestAbstractBaseJavaLocalInspectionTool"/>
+
     </extensions>
 
     <actions>
