@@ -49,7 +49,7 @@ public class TestAction extends AnAction {
 
         ApplicationManager.getApplication().executeOnPooledThread(() -> {
             ApplicationManager.getApplication().runReadAction(() -> {
-                consoleView.print(Thread.currentThread().getName(), ConsoleViewContentType.NORMAL_OUTPUT);
+                consoleView.print(Thread.currentThread().getName() + "\n", ConsoleViewContentType.NORMAL_OUTPUT);
                 for (int i = 0; i < 3; i++) {
                     try {
                         consoleView.print("hello " + i + "\n", ConsoleViewContentType.NORMAL_OUTPUT);
