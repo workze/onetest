@@ -11,6 +11,8 @@
         <module>spring</module>
         <module>idea-plugin-bundle</module>
         <module>sqlite</module>
+        <module>jackson</module>
+        <module>common</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -61,6 +63,11 @@
     <dependencyManagement>
         <dependencies>
             <!-- 自身模块 -->
+            <dependency>
+                <groupId>com.onetest</groupId>
+                <artifactId>common</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
 
             <!-- 通用 -->
             <dependency>
