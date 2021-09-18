@@ -13,6 +13,7 @@
         <module>sqlite</module>
         <module>jackson</module>
         <module>common</module>
+        <module>parser</module>
     </modules>
 
     <packaging>pom</packaging>
