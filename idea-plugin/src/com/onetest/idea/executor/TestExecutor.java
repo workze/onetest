@@ -3,7 +3,6 @@ package com.onetest.idea.executor;
 import com.intellij.execution.Executor;
 import com.intellij.openapi.Disposable;
 import com.intellij.openapi.util.Disposer;
-import com.intellij.openapi.util.NlsActions;
 import com.intellij.util.IconUtil;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
@@ -45,13 +44,13 @@ public class TestExecutor extends Executor implements Disposable{
     }
 
     @Override
-    public @NlsActions.ActionDescription String getDescription() {
+    public  String getDescription() {
         return "这是Action描述";
     }
 
     @NotNull
     @Override
-    public @NlsActions.ActionText String getActionName() {
+    public String getActionName() {
         return null;
     }
 
