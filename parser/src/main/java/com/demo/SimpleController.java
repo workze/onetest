@@ -2,6 +2,7 @@ package com.demo;
 
 import com.demo.model.AppDTO;
 import com.demo.service.AppService;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -33,4 +34,24 @@ public class SimpleController {
         return app;
     }
 
+    @Data
+    public class InnerClass {
+        String innerClassFiled;
+    }
+
+    @Data
+    static class StaticInnerClass {
+        String staticClassField;
+    }
+
+    @Data
+    public static class PublicStaticClass {
+        String publicStaticClassField;
+    }
+
+}
+
+@Data
+class SecondClass {
+    String secondClassField;
 }
