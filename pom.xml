@@ -14,6 +14,7 @@
         <module>jackson</module>
         <module>common</module>
         <module>parser</module>
+        <module>reflect</module>
     </modules>
 
     <packaging>pom</packaging>

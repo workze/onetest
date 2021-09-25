@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * simple_class_desc
  *
@@ -16,11 +21,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/simple")
-public class SimpleController {
+public class SimpleController<T> extends AppDTO implements Cloneable{
 
     @Autowired
     AppService appService;
 
+    T t;
 
     /**
      * test01_desc
@@ -52,6 +58,6 @@ public class SimpleController {
 }
 
 @Data
-class SecondClass {
+class SecondClass extends ArrayList<String> {
     String secondClassField;
 }
