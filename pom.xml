@@ -17,6 +17,7 @@
         <module>reflect</module>
         <module>test-pom</module>
         <module>aether</module>
+        <module>test-dep</module>
     </modules>
 
     <packaging>pom</packaging>
