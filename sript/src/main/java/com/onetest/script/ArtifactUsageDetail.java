@@ -30,6 +30,8 @@ public class ArtifactUsageDetail implements Serializable {
     private String version;
     private String rpcClient;
     private String snapshot;
+    private String type;
+    private String provider;
 
     private Integer consumerAppId;
     private String consumerAppName;
