@@ -6,4 +6,7 @@ package com.demo.testsource;
  */
 public class B {
     String name;
+    public String fieldMethod(String CONST) {
+        return null;
+    }
 }

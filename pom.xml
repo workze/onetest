@@ -19,6 +19,7 @@
         <module>aether</module>
         <module>test-dep</module>
         <module>sript</module>
+        <module>js</module>
     </modules>
 
     <packaging>pom</packaging>

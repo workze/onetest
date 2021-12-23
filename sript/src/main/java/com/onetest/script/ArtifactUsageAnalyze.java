@@ -40,7 +40,7 @@ public class ArtifactUsageAnalyze {
 
         System.out.println(all.size());
 
-        CsvWriter csvWriter = new CsvWriter(new File("artifact-usage-detail-2.csv"));
+        CsvWriter csvWriter = new CsvWriter(new File("artifact-usage-detail-3.csv"));
         csvWriter.writeBeans(all);
 
     }

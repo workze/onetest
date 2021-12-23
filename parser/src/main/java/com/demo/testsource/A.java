@@ -1,10 +1,20 @@
 package com.demo.testsource;
 
-/**
- * @author wangguize
- * @date 2021/9/19
- */
-public class A {
-    String name;
-    B b;
+
+
+public class A extends Parent {
+
+    B field;
+    final String CONST = "xxx";
+
+    public String method(C parameter) {
+        selfMethod("string value");
+        super.parentMethod();
+        field.fieldMethod(CONST);
+        parameter.parameterMethod(D.staticMethod());
+        return null;
+    }
+
+    public void selfMethod(Object object) {
+    }
 }
