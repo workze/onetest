@@ -36,10 +36,6 @@ public class ExportArtifactUsageDetail {
 
             offset = offset + pageSize;
             System.out.println(offset);
-
-            if (offset > 2000) {
-                break;
-            }
         } while (CollUtil.size(results) > 0);
 
         System.out.println(all.size());
