@@ -10,17 +10,16 @@ public class ArtifactUsageDetail implements Serializable {
 
     private static final long serialVersionUID = 1638106817505L;
 
+    /**
+     *
+     */
     private Integer providerAppId;
     private String providerAppName;
+
     private String providerDepartment1;
     private String providerDepartment2;
     private String providerDepartment3;
     private String providerDepartment4;
-
-    /**
-     * 主键
-     */
-    private Integer usageId;
 
     /**
      * 制品
@@ -28,13 +27,16 @@ public class ArtifactUsageDetail implements Serializable {
     private String artifactId;
     private String groupId;
     private String version;
-    private String rpcClient;
-    private String snapshot;
-    private String type;
-    private String provider;
 
+    private String snapshot;
+    private String category;
+
+    /**
+     *
+     */
     private Integer consumerAppId;
     private String consumerAppName;
+
     private String consumerDepartment1;
     private String consumerDepartment2;
     private String consumerDepartment3;
