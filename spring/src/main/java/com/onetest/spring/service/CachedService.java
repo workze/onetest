@@ -18,12 +18,7 @@ public class CachedService {
         return new Date().toString();
     }
 
-    @Cacheable(cacheNames = "app")
-    public String get2(Integer id) {
-        return new Date().toString();
-    }
-
-    @CacheEvict(cacheNames = "app", allEntries = true)
+    @CacheEvict(cacheNames = "user", allEntries = true)
     public String del(Integer id) {
         return new Date().toString();
     }
