@@ -20,6 +20,7 @@
         <module>test-dep</module>
         <module>sript</module>
         <module>js</module>
+        <module>load-class</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -48,6 +49,12 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.7.18</version>
         </dependency>
 
 
