@@ -23,8 +23,6 @@ public class Loadclass {
                 // new URL("file://" + "/Users/wangguize/.m2/repository/org/apache/poi/poi/3.17/poi-3.17.jar"),
         };
         URLClassLoader cl = URLClassLoader.newInstance(urls, null);
-        final Class<?> aClass = cl.loadClass("com.onetest.A");
-        System.out.println(aClass);
 
         while (e.hasMoreElements()) {
             JarEntry je = e.nextElement();
