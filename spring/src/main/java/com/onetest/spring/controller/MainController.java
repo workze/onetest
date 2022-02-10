@@ -19,14 +19,14 @@ public class MainController {
 
     @RequestMapping(value = "getCache", method = RequestMethod.GET)
     public String testCache() {
-        System.out.println(cachedService.get(1));
-        return "";
+        System.out.println(cachedService.get(1, "123"));
+        return "success";
     }
 
     @RequestMapping(value = "delCache", method = RequestMethod.GET)
     public String delCache() {
         cachedService.del(1);
-        return "";
+        return "success";
     }
 
 }

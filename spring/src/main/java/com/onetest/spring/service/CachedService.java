@@ -13,8 +13,9 @@ import java.util.Date;
 @Service
 public class CachedService {
 
-    @Cacheable(cacheNames = "user")
-    public String get(Integer id) {
+    @Cacheable(cacheNames = "user", key = "#id + #name")
+    public String get(Integer id, String name) {
+        System.out.println("doGet...");
         return new Date().toString();
     }
 

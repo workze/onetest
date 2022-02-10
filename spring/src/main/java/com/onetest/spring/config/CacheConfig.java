@@ -25,7 +25,7 @@ public class CacheConfig {
         List<Cache> caches = new ArrayList<>();
 
         caches.add(new GuavaCache("user",
-                CacheBuilder.newBuilder().expireAfterAccess(5, TimeUnit.SECONDS).build()));
+                CacheBuilder.newBuilder().expireAfterAccess(5, TimeUnit.MINUTES).build()));
 
         simpleCacheManager.setCaches(caches);
 
