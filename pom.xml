@@ -21,6 +21,7 @@
         <module>sript</module>
         <module>js</module>
         <module>load-class</module>
+        <module>dataflow</module>
     </modules>
 
     <packaging>pom</packaging>
