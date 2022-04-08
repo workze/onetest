@@ -22,6 +22,7 @@
         <module>js</module>
         <module>load-class</module>
         <module>dataflow</module>
+        <module>antlr</module>
     </modules>
 
     <packaging>pom</packaging>
