@@ -24,6 +24,7 @@
         <module>dataflow</module>
         <module>antlr</module>
         <module>retrofit</module>
+        <module>gitlab</module>
     </modules>
 
     <packaging>pom</packaging>
