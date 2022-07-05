@@ -23,6 +23,7 @@
         <module>load-class</module>
         <module>dataflow</module>
         <module>antlr</module>
+        <module>retrofit</module>
     </modules>
 
     <packaging>pom</packaging>
